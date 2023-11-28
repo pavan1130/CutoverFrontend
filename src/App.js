@@ -10,18 +10,47 @@ import Settings from "./Main/Settings";
 import Report from "./Main/Report";
 import Notifications from "./Main/Notification";
 import Search from "./Main/Search";
+import Sidebar from "./page/Sibebar";
+import "./App.css";
+import TechinalTool from "./Home/TechinalTool";
+import Bussniess from "./Home/Bussniess";
+import Configiration from "./Home/Configiration";
+import Adult from "./Home/Adult";
 export default function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/dash" element={<Dashborad />} />
         <Route path="/" element={<SignIn />} />
         <Route path="/SignUp" element={<Sign />} />
-        <Route path="/report" element={<Report />} />
-        <Route path="/search" element={<Search />} />
-        <Route path="/notifications" element={<Notifications />} />
-        <Route path="/reportstatus" element={<ReportStatus />} />
-        <Route path="/settings" element={<Settings />} />
+        <Route
+          path="/*"
+          element={
+            <>
+              <div className="app">
+                <Sidebar />
+
+                <div className="content">
+                  <Routes>
+                    <Route path="/dash" element={<Dashborad />} />
+                    <Route path="/report" element={<Report />} />
+                    <Route path="/search" element={<Search />} />
+                    <Route path="/notifications" element={<Notifications />} />
+                    <Route path="/reportstatus" element={<ReportStatus />} />
+                    <Route path="/settings" element={<Settings />} />
+                    <Route
+                      path="/technical-cutover"
+                      element={<TechinalTool />}
+                    />
+                    <Route path="/business-cutover" element={<Bussniess />} />
+                    <Route path="/status-report" element={<Report />} />
+                    <Route path="/configurations" element={<Configiration />} />
+                    <Route path="/adult" element={<Adult />} />
+                  </Routes>
+                </div>
+              </div>
+            </>
+          }
+        />
       </Routes>
     </Router>
   );
