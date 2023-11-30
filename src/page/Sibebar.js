@@ -20,33 +20,39 @@ const Sidebar = () => {
           <GoHome className={styles["icons"]} />
         </Link>
         <Link
-          to="/report"
-          className={location.pathname === "/report" ? styles.active : ""}
+          to="/business-cutover"
+          className={
+            location.pathname === "/business-cutover" ? styles.active : ""
+          }
         >
           <FaBars className={styles["icons"]} />
         </Link>
         <Link
-          to="/reportstatus"
-          className={location.pathname === "/reportstatus" ? styles.active : ""}
+          to="/status-report"
+          className={
+            location.pathname === "/status-report" ? styles.active : ""
+          }
         >
           <VscGraph className={styles["icons"]} />
         </Link>
         <Link
-          to="/search"
-          className={location.pathname === "/search" ? styles.active : ""}
+          to="/adult"
+          className={location.pathname === "/adult" ? styles.active : ""}
         >
           <FaSearch className={styles["icons"]} />
         </Link>
         <Link
-          to="/settings"
-          className={location.pathname === "/settings" ? styles.active : ""}
+          to="/configurations"
+          className={
+            location.pathname === "/configurations" ? styles.active : ""
+          }
         >
           <IoSettingsOutline className={styles["icons"]} />
         </Link>
         <Link
           to="/notifications"
           className={
-            location.pathname === "/notifications" ? styles.active : ""
+            location.pathname === "/notitification" ? styles.active : ""
           }
         >
           <IoNotificationsOutline className={styles["icons"]} />
